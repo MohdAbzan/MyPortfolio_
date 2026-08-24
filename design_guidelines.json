@@ -1,0 +1,106 @@
+{
+  "project_context": {
+    "type": "Portfolio",
+    "theme": "Cosmic Dark (Default) with Light Mode Toggle",
+    "vibe": "Awwwards SOTD, Hyper-Engaging, Precision & Space",
+    "persona": "Mohammed Abzan - Administration & Customer Service Professional"
+  },
+  "typography": {
+    "primary": "Unbounded",
+    "secondary": "Satoshi",
+    "mono": "JetBrains Mono",
+    "rules": [
+      "No Inter or generic sans for headings. Use Unbounded for a bold, cosmic, premium look.",
+      "Use tight letter spacing (tracking-tighter) for massive hero texts.",
+      "Limit hero heading max text-6xl with fluid clamp scaling. No text-9xl."
+    ]
+  },
+  "colors": {
+    "dark_mode": {
+      "background": "#03040B",
+      "surface": "#0C0F1A",
+      "primary_glow": "#10B981",
+      "accent_amber": "#F59E0B",
+      "text_main": "#F9FAFB",
+      "text_muted": "#9CA3AF"
+    },
+    "light_mode": {
+      "background": "#F8FAFC",
+      "surface": "#FFFFFF",
+      "primary_glow": "#059669",
+      "accent_amber": "#D97706",
+      "text_main": "#022C22",
+      "text_muted": "#4B5563"
+    },
+    "rules": [
+      "Use tinting: Never use pure black #000000. Always tint it slightly blue/purple (e.g., #03040B).",
+      "Gradients are for decorative borders and nodes, not full screen backgrounds."
+    ]
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-white/5 (Dark) or bg-white/70 (Light) with 1px border-white/10. NO FULLY TRANSPARENT BACKGROUNDS.",
+    "glow_effects": "Emerald/Amber drop shadows and radial gradients for interactive nodes and hover states.",
+    "textures": "Subtle noise/grain overlay globally to kill digital flatness."
+  },
+  "components_and_layouts": {
+    "hero": {
+      "concept": "Kinetic, Masked Reveal, Cursor-Tracking Avatar",
+      "details": "Massive 'MOHAMMED ABZAN' typography. Masked line-by-line reveal on load. Dynamic rotating role text. Avatar is a geometric cosmic face where eyes/face follow the mouse via Framer Motion."
+    },
+    "about": {
+      "concept": "Bento Grid (Tetris Mode)",
+      "details": "Asymmetric layout: grid-cols-1 md:grid-cols-12. Floating cards with hover tilt (rotateX/Y) physics and glowing tracing beam borders. Use generative cargo/airport night imagery as deep backgrounds."
+    },
+    "experience": {
+      "concept": "Bubble Hover Timeline",
+      "details": "Floating timeline cards acting like bubbles. On hover, they ripple/expand. High physics-based motion rather than static lists."
+    },
+    "skills": {
+      "concept": "Shooting Stars Cosmic Canvas",
+      "details": "Cosmic background. Skills nodes shoot across the canvas and lock into categorized badges (Technical, Soft, Tools)."
+    },
+    "marquee": {
+      "concept": "Slow Editorial Ribbon",
+      "details": "Numbered manifesto chapters drifting slowly. Large outline text in the background to provide kinetic texture."
+    }
+  },
+  "motion_and_libraries": {
+    "scroll": "Lenis for premium momentum scrolling.",
+    "animations": "Framer Motion for scroll reveals, hover tilts, bubble physics, and avatar eye-tracking.",
+    "icons": "lucide-react"
+  },
+  "media": {
+    "image_urls": {
+      "hero_avatar_inspiration": {
+        "url": "https://images.pexels.com/photos/18425138/pexels-photo-18425138.jpeg",
+        "description": "Neon geometric cosmic astronaut. Use for avatar/hero inspiration."
+      },
+      "experience_bg": {
+        "url": "https://images.pexels.com/photos/67563/plane-aircraft-jet-airbase-67563.jpeg",
+        "description": "Airport cargo night ops for bento grid or experience backdrop."
+      },
+      "skills_particles": {
+        "url": "https://images.unsplash.com/photo-1742868305902-8fb16bc689a0",
+        "description": "Emerald glowing stars for skills cosmic canvas backdrop."
+      }
+    }
+  },
+  "instructions_to_main_agent": [
+    "Use .js/.jsx extensions for all React components, not .tsx.",
+    "Implement a Dark/Light mode toggle that flips the cosmic theme to a bright, clean glass aesthetic seamlessly.",
+    "For the cursor-tracking avatar, use framer-motion's usePointer/useTransform to map mouse X/Y to eye/face rotateX/Y values up to ±15 degrees.",
+    "Integrate Lenis for smooth scroll. Wrap the main app layout with it.",
+    "Do NOT build a Projects section. Skip it entirely as per requirements.",
+    "Forms must have validation and success states using react-hook-form + sonner for toasts.",
+    "Use 'react-fast-marquee' for the slow editorial ribbon."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Avoid generic 'AI slop' centralized designs. Embrace tension, overlapping elements, and asymmetry.",
+    "Do NOT apply universal transitions like 'transition: all'. It breaks Framer Motion transforms. Target specific properties.",
+    "Do NOT center align the entire app container (.App { text-align: center }). Use proper grid/flex alignments.",
+    "Generous spacing: Use p-8, p-12. Avoid cramped UIs. Containers with borders need ample padding.",
+    "All interactive elements MUST have explicit hover/focus state colors to guarantee contrast.",
+    "Never use completely transparent backgrounds for headers/dropdowns. Always use solid or glassmorphism (backdrop-blur-xl).",
+    "All interactive and key informational elements MUST include a 'data-testid' attribute (e.g., data-testid='contact-submit-btn')."
+  ]
+}
